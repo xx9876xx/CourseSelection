@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MvcCourseSelection0425Demo.Models.Course>
+@{
+    ViewBag.Title = "Selection";
+}
+
+<h2>Selection</h2>
+<div>
+
+    <input id="Text1" type="text" />
+
+</div>
+<div>
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.id)</th>
+            <th>@Html.DisplayNameFor(model => model.courseName)</th>
+            <th>@Html.DisplayNameFor(model => model.department)</th>
+            <th>@Html.DisplayNameFor(model => model.college)</th>
+            <th>@Html.DisplayNameFor(model => model.day)</th>
+            <th>@Html.DisplayNameFor(model => model.period)</th>
+            <th>@Html.DisplayNameFor(model => model.teacher)</th>
+        </tr>
+
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.courseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.college)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.period)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teacher)
+            </td>
+        </tr>
+    }
+    </table>
+</div>
+<div>
+    <input id="Submit1" type="submit" value="確定" />
+</div>
+
+
+
+
+
+
